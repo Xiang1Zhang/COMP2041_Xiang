@@ -1,0 +1,129 @@
+
+This file is automarked.  
+
+Do not add extra lines to this file, just add your answers.
+
+For example if your answer to Q1 is: egrep Andrew words.txt
+Change the line that says Q1 answer to:
+
+Q1 answer: egrep Andrew words.txt 
+
+
+1) Write an egrep command  that prints  the words in words.txt
+which contain in characters "lmn" consecutively.
+
+Q1 answer: cat words.txt | egrep .lmn
+
+
+2) Write a shell pipeline  that prints the words that contain "zz", but do not end in apostrophe-s ('s)?
+
+Q2 answer: cat words.txt | egrep .zz | egrep "'s$" -v
+
+
+3) Write an egrep command that prints the words that contain four consecutive vowels?
+
+Q3 answer: cat words.txt | egrep -i [aeiou]{4}
+
+
+4) Write an egrep command that prints words which contain all 5 vowels "aeiou" in that order?
+
+Q4 answer: cat words.txt | egrep a[^e]*e[^i]*i[^o]*o[^u]*u
+
+
+5) Write an egrep command that prints which contain the vowels "aeiou" in that order
+and no other vowels.
+
+Q5 answer: cat words.txt | egrep ^[^aeiou]*a[^aeiou]*e[^aeiou]*i[^aeiou]*o[^aeiou]*u[^aeiou]*$ 
+
+
+6) Write an egrep command that will print all the lines in the file where the electorate begins with W.
+
+Q6 answer: cat parliament.txt | egrep " Member for W"
+
+
+7) Write an egrep command that will list all the lines in the file where the MP's
+first name is Andrew.
+
+Q7 answer: cat parliament.txt | egrep " Andrew "
+
+
+8) Write an egrep command that will print all the lines in the file where the MP's
+surname (last name) ends in the letter 'y'.
+
+Q8 answer: cat parliament.txt | egrep "(y:|y [^ ]*[A-Z]:)"
+
+
+9) Write an egrep command that will print all the lines in the file where the MP's name and the electorate
+ends in the letter 'y'.
+
+Q9 answer: cat parliament.txt | egrep "(y:|y [^ ]*[A-Z]:)" | egrep y,
+
+
+10) Write an egrep command that will print all the lines in the file where the MP's name or the electorate
+ends in the letter 'y'.:
+
+Q10 answer: cat parliament.txt | egrep "(y:|y [^ ]*[A-Z]:)|y,"
+
+
+11) Write an egrep command to print all the lines in the file where there is any part of the
+MP's name or the electorate name that ends in ng.
+
+Q11 answer: cat parliament.txt | egrep -w .*ng
+
+
+12) Write an egrep command that will print all the lines in the file where the MP's
+surname (last name) both begins and ends with a vowel.
+
+Q12 answer: cat parliament.txt | egrep -i " [aeiou][^ ]*[aeiou]: " | egrep " [A-Z][A-Z]: " -v
+
+
+13) Most electorate have names that are a single word, e.g. Warringah, Lyons &amp; Grayndler.
+A few electorates have multiple word names, for example, Kingsford Smith.
+Write an egrep command that will print all the lines in the file where the electorate name contains
+multiple words (separated by spaces or hyphens).
+
+Q13 answer: cat parliament.txt | egrep ": Member for [a-zA-Z]+( |-)[a-zA-Z]"
+
+
+14) Write a shell pipeline which prints the 8 Australians states &amp; territory in order of the number of MPs they have.
+It should print only the names of the states/territories.
+It should print them one per line
+
+Q14 answer: cat parliament.txt | cut -f2 -d',' | sort | uniq -c | sort -n | cut -c 10-
+
+
+15) Challenge: The most common first name for an MP is Andrew.
+Write a shell pipeline which prints the 2nd most common MP first name.
+It should print this first name and only this first name.
+
+Q15 answer: cat parliament.txt | sed -r 's/^((Mr|Mrs|Ms|Dr|The Hon|Hon) )//;p' | cut -d' ' -f1 | sort | uniq -c | sort -rn | sed -n 2p | cut -c 9- 
+
+
+16) Write a egrep command  that prints the lines in a file named input.txt containing
+containing at least one A and at least one B.
+
+Q16 answer: egrep 'A.*B|B.*A' input.txt
+
+
+17) Write a egrep command  that prints the lines in a file named input.txt containing
+only the characters A and  B such that
+all pairs of adjacent A's occur before any pairs of adjacent B's.
+In other words if there is pair of B's on the line , there can not be
+a pair of A's afterwards.
+
+Q17 answer: egrep '^A*(A*B)*A?(BB+AB*)*$' input.txt
+
+
+18) Write a egrep command  that prints the lines in a file named input.txt containing
+only the characters A and  B such that
+the number of A's is divisible by 4.
+
+Q18 answer: egrep '^((B*A){4})*B*$' input.txt
+
+
+19) Write a egrep command  that prints the lines in a file named input.txt containing
+only the characters A and  B such that
+there are exactly n A's followed by
+exactly n B's and no other characters.
+
+Q19 answer:
