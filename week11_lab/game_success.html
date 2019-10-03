@@ -1,0 +1,10 @@
+{% extends "game_base.html" %}
+{% block body %}
+<form method="POST" action="">
+    You guessed it.
+        <br>
+        {{ message }}
+        <br>
+    <input type="submit" value="Play again" name="play_again">
+</form>
+{% endblock %}
