@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block body_contents %}
+
+<p>
+{{message}}
+<form method="POST" action="login">
+<p>
+zid: <input type="text" name="zid" >
+<p>
+password: <input type="password" name="password" >
+<p>
+<input type="submit" value="Login">
+</p>
+
+</form>
+{% endblock %}

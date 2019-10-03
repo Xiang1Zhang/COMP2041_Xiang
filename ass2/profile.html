@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block body_contents %}
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+<tr> 
+<td width="50%">
+<div class="subheading">
+INFORMATIONS
+</div>
+
+<div class="unswtalk_user_details">
+<img src=" {{ url_for('static', filename=student_images)}}">
+{{student_fullname}}
+{{student_zid}}
+{{student_program}}
+{{student_home}}
+{{student_birthday}}
+</p>
+
+</div>
+<div class="subheading">
+Friends list
+</div>
+
+<div class="unswtalk_user_details">
+{% for zid in friends_list %}
+<a href="{{ url_for('profile', zid=zid) }}">{{friends_list[zid]['name']}}
+<a href="{{ url_for('profile', zid=zid) }}"><img src=" {{ url_for('static', filename="dataset-medium/"+zid+"/img.jpg")}}" height="50" width="50"></a>
+{% endfor %}
+</div>
+
+
+</td> 
+<td>
+<div class="subheading">
+POST
+</div>
+<br>
+
+<form action="{{ url_for('add_post') }}" method=post>
+      <dl>
+        <dt>Title:
+        <dd><input type="text" size=30 name="title">
+        <dt>Text:
+        <dd><textarea name="text" rows=5 cols=40></textarea>
+        <dd><input type="submit" value="Post">
+      </dl>
+    </form>
+<br>
+
+{% for n in post %}
+<a href="{{ url_for('profile', zid=post[n]['from']) }}">{{name}}</a>
+<br>
+{{ post[n]['message']}}
+<br>
+{{ post[n]['time']}}
+<br>
+<br>
+{% endfor %}
+
+</td> 
+</tr> 
+</table> 
+
+{% endblock %}

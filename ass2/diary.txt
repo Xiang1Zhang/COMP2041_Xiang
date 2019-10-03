@@ -1,0 +1,6 @@
+14/10/17        19:00   23:00   coding          reading the instruction of the assignment 2 and starting handling subset0 which is adding the image of the student and hiding some private information
+17/10/17	12:00	14:00	coding		Being able to change the color and layout of the interface using css
+17/10/17	18:00	22:00	coding		finishing adding posts but they are messy ,creating the friends list and adding the login module as well as the authentication
+19/10/17	19:00	22:00	coding		adding the logout module and adding the thumbnail images for friends list
+23/10/17	18:30	19:30	coding		finishing searching the students whose names match the string and display the thumbnail images.
+24/10/17	18:30	20:30	coding		adding clicking on the image and/or name should take you to that UNSWtalk page and create the html for making post

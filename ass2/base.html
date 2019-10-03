@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>unswtalk</title>
+<link href="{{url_for('static', filename='UNSWtalk.css')}}") rel="stylesheet">
+</head>
+<body>
+
+<div class="unswtalk_heading">
+UNSWtalk
+</div>
+
+<br>
+<div>
+{% if authenticated %}
+<a href="{{ url_for('start') }}">Home</a>
+<a href="{{ url_for('start') }}">See other student</a>
+<a href="{{ url_for('logout') }}">Logout</a>
+<form method="POST" action="search"><input type="text" name="search" autocomplete="off" placeholder="Search Name Here" />
+<form method="POST" action="{{ url_for('search') }}"><input type="text" name="search" autocomplete="off" placeholder="Search Name Here" /></form>
+<br>
+<form method="POST" action="{{ url_for('searchpost') }}"><input type="text" name="search" autocomplete="off" placeholder="Search Posts Here" /></form>
+{% endif %}
+</div>
+</form>
+
+{% block body_contents %}
+{% endblock %}
+
+</body>
+</html>

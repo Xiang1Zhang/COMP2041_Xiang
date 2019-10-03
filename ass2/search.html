@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block body_contents %}
+
+<div class="unswtalk_user_details">
+{% for zid in search_list %}
+<a href="{{ url_for('profile', zid=zid) }}">{{search_list[zid]['name']}}</a>
+<a href="{{ url_for('profile', zid=zid) }}"><img src=" {{ url_for('static', filename="dataset-medium/"+zid+"/img.jpg")}}" height="70" width="70"></a>
+{% endfor %}
+</div>
+
+{% endblock %}

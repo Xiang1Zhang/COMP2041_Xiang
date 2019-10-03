@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block body_contents %}
+
+<div class="unswtalk_user_details">
+{% for zid in search_list %}
+{{search_list[zid]['message']}} from <a href="{{ url_for('profile', zid=search_list[zid]['from']) }}">{{search_list[zid]['from']}}</a> 
+<br>
+{% endfor %}
+</div>
+
+{% endblock %}
+
