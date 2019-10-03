@@ -1,0 +1,27 @@
+19/09/17	18:30	19:00	testing		setting the working environment and playing with the sample code(subset0)
+19/09/17	19:00	20:00	coding		finished subset1
+19/09/17	20:00	21:30	coding		almost finished subset2, but the layout needs to be adjusted
+19/09/17	20:00	21:30	coding		almost finished subset2, but the layout needs to be adjusted
+19/09/17	20:00	21:30	coding		almost finished subset2, but the layout needs to be adjusted
+19/09/17	20:00	21:30	coding		almost finished subset2, but the layout needs to be adjusted
+19/09/17	20:00	21:30	coding		almost finished subset2, but the layout needs to be adjusted
+19/09/17	20:00	21:30	coding		almost finished subset2, but the layout needs to be adjusted
+19/09/17	20:00	21:30	coding		almost finished subset2, but the layout needs to be adjusted
+19/09/17	20:00	21:30	coding		almost finished subset2, but the layout needs to be adjusted
+19/09/17	20:00	21:30	coding		almost finished subset2, but the layout needs to be adjusted
+19/09/17	20:00	21:30	coding		almost finished subset2, but the layout needs to be adjusted
+19/09/17	20:00	21:30	coding		almost finished subset2, but the layout needs to be adjusted
+19/09/17	20:00	21:30	coding		almost finished subset2, but the layout needs to be adjusted
+19/09/17	20:00	21:30	coding		almost finished subset2, but the layout needs to be adjusted
+19/09/17	20:00	21:30	coding		almost finished subset2, but the layout needs to be adjusted
+19/09/17	20:00	21:30	coding		almost finished subset2, but the layout needs to be adjusted
+19/09/17	20:00	21:30	coding		almost finished subset2, but the layout needs to be adjusted
+19/09/17	20:00	21:30	coding		almost finished subset2, but the layout needs to be adjusted
+19/09/17	20:00	21:30	coding		almost finished subset2, but the layout needs to be adjusted
+19/09/17	20:00	21:30	coding		almost finished subset2, but the layout needs to be adjusted
+20/09/17	19:00	20:00	debugging	fixed the layout problems of subset2
+20/09/17	20:00	22:00	coding		starting trying to do subset3
+30/09/17	12:30	13:00	coding		trying to recall what have done before mid-break
+30/09/17	19:00	22:00	coding		almost finished all the requirements for subset3
+01/10/17	11:00	12:00	debugging	testing and debugging for subset3
+01/10/17	15:00	16:00	coding		starting trying subset4
